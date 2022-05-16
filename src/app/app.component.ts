@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  name: string = '';
+
+  onNameChange(value: KeyboardEvent) {
+    const target = value.target as HTMLTextAreaElement;
+     this.name = target.value
+  }
 }
