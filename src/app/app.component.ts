@@ -11,6 +11,7 @@ export class AppComponent {
   date: string = '';
   amount: undefined |number;
   height: undefined | number;
+  miles: undefined | number;
 
   car = { 
     make: 'Toyota',
@@ -18,6 +19,10 @@ export class AppComponent {
     year: 1934
   }
   
+  onMilesChange(value: KeyboardEvent) {
+    const target = value.target as HTMLTextAreaElement;
+    this.miles = parseFloat(target.value)
+  }
   onNameChange(value: KeyboardEvent) {
     const target = value.target as HTMLTextAreaElement;
      this.name = target.value

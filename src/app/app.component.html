@@ -59,5 +59,21 @@
     </div>
      <!-- {{ car | json}} -->
   </div>
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Miles</label>
+      <input class="form-control" (input)="onMilesChange($any($event))">
+    </div>
+     
+    <div class="col">
+      <label for=""><b>Kilometers</b></label>
+      <div>
+
+        <!-- if we need multiple arguments we can pass them with colon -->
+        {{ miles | convert:'km' }}
+      </div>
+    </div>
+    
+  </div>
 </div>
 
