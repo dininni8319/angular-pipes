@@ -67,10 +67,14 @@
      
     <div class="col">
       <label for=""><b>Kilometers</b></label>
-      <div>
 
+      <!-- it will show this div only if the value entered is great than 10 km -->
+      <!-- In this case we are using pipes in other locations -->
+      <!-- <div *ngIf="miles !== undefined && (miles | convert: 'km') > 10 "> -->
+        <div>
         <!-- if we need multiple arguments we can pass them with colon -->
-        {{ miles | convert:'km' }}
+        <!-- we can use multiple pipes by chaining them with this syntax -->
+        {{ miles | convert:'cm' | number: '1.0-2'}}
       </div>
     </div>
     
